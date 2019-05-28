@@ -109,6 +109,7 @@ void ComputeParticleSimulator::Initialize(const char * title)
     // Initialize our compute program
     compute_prog = glCreateProgram();
 
+#if 0
     static const char compute_shader_source[] =
         STRINGIZE(
 #version 430 core\n
@@ -152,6 +153,9 @@ void main(void)
     imageStore(velocity_buffer, int(gl_GlobalInvocationID.x), vel);
 }
         );
+#else
+    static const char compute_shader_source[] = {0};
+#endif
 
     vglAttachShaderSource(compute_prog, GL_COMPUTE_SHADER, compute_shader_source);
 

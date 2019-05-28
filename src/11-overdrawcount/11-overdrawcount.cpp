@@ -5,6 +5,10 @@
    $Id$
  */
 
+#include <cstdio>
+#include <cstring>
+#include <string>
+
 #include "vapp.h"
 #include "vutils.h"
 
@@ -13,8 +17,6 @@
 #include "vbm.h"
 #include "LoadShaders.h"
 
-#include <stdio.h>
-#include <string>
 
 #define MAX_FRAMEBUFFER_WIDTH 2048
 #define MAX_FRAMEBUFFER_HEIGHT 2048
